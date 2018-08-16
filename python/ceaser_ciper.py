@@ -7,8 +7,6 @@ def encrypt(string, shift):
             result += chr((ord(i) + shift - 97) % 26 + 97)
     return result
 
-print(encrypt("HelloWorld",4))
-
 def decrypt(string, shift):
     result = ""
     for i in string:
@@ -18,4 +16,7 @@ def decrypt(string, shift):
             result += chr((ord(i) - shift - 97) % 26 + 97)
     return result
 
-print(decrypt(encrypt("HelloWorld",4),4))
+encryptedText = encrypt("HelloWorld",4)
+decryptedText = decrypt(encryptedText, 4)
+print("Encrypted Text : ", encryptedText)
+print("Decrypted Text : ", decryptedText)
