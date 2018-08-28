@@ -6,8 +6,6 @@ def encrypt(string, shift):
         else:
             result += chr((ord(i) + shift))
     return result
-encrypted=encrypt("Hello World",4)
-print(encrypted)
 
 def decrypt(string, shift):
     result = ""
@@ -17,5 +15,9 @@ def decrypt(string, shift):
         else:
             result += chr((ord(i) - shift))
     return result
+
+
+encrypted=encrypt("Hello World",4)
+print(encrypted)
 
 print(decrypt(encrypted,4))
