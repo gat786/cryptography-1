@@ -4,12 +4,14 @@ import string
 text_input=input("Enter text ")
 
 ciphers="0123456789"+string.ascii_lowercase+string.ascii_uppercase
-
+print(len(ciphers))
 def get_key(text_input):
     text_key=""
     for every in text_input:
-        num=random.randint(0,len(ciphers)-1)
+        num=random.randint( 0 , len(ciphers) - 1 ) 
         text_key += ciphers[num]
+    print("generated key is ")
+    print(text_key)
     return text_key
 
 def get_index(input_text):
@@ -17,9 +19,6 @@ def get_index(input_text):
     for every in input_text:
         list_return.append(ciphers.index(every))
     return list_return
-
-def get_list(text):
-    return [i for i in text]
 
 def get_charachter(list_numbers):
     list_charachters=[]
